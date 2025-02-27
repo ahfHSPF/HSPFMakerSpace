@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MakerSpace Vorstellung</title>
+  <style>
+    /* Basis-Styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f9f9f9;
+    }
+    h1, h2, h3 {
+      text-align: center;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    /* Kalender-Styles */
+    table.calendar {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    table.calendar th {
+      background-color: #666;
+      color: #fff;
+      padding: 10px;
+    }
+    table.calendar td {
+      text-align: center;
+      padding: 10px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+    /* Farben für "grün" / "rot" */
+    .green {
+      background-color: #a1f0a1;
+    }
+    .red {
+      background-color: #f0a1a1;
+    }
+    /* Öffnungszeiten Tabelle */
+    table.opening-hours {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    table.opening-hours th,
+    table.opening-hours td {
+      padding: 8px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+    .info-section {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Willkommen in unserem MakerSpace!</h1>
+    <p>
+      Wir sind ein offener Ort für alle Bastler, Tüftler und Kreative. Hier hast du Zugriff
+      auf 3D-Drucker, Laser-Cutter, Holz- und Metallwerkstätten sowie ein breites Netzwerk
+      von Gleichgesinnten.
+    </p>
+
+    <div class="info-section">
+      <h2>Öffnungszeiten</h2>
+      <p>Unsere regulären Öffnungszeiten (mit Voranmeldung oder Mitgliedsausweis):</p>
+      <table class="opening-hours">
+        <thead>
+          <tr>
+            <th>Tag</th>
+            <th>Zeiten</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Montag - Freitag</td>
+            <td>16:00 - 21:00 Uhr</td>
+          </tr>
+          <tr>
+            <td>Samstag</td>
+            <td>10:00 - 18:00 Uhr</td>
+          </tr>
+          <tr>
+            <td>Sonntag</td>
+            <td>Geschlossen (nach Vereinbarung)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-section">
+      <h2>Anfahrt &amp; Erreichbarkeit</h2>
+      <p>
+        Adresse: Musterstraße 123, 12345 Musterstadt
+      </p>
+      <p>
+        Mit öffentlichen Verkehrsmitteln: U-Bahn Linie 1 bis Haltestelle "Musterplatz" - 
+        von dort sind es nur 5 Minuten Fußweg.
+      </p>
+      <p>
+        Parkmöglichkeiten sind direkt vor dem Gebäude vorhanden (kostenlos).
+      </p>
+      <!-- Optional: Google Maps IFrame für Lageplan -->
+      <!--
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!..."
+        width="600"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+      -->
+    </div>
+
+    <div class="info-section">
+      <h2>Kalender</h2>
+      <p>Klicke auf ein Datum, um zwischen <span style="color:green;">grün</span> und <span style="color:red;">rot</span> zu wechseln (z.B. zur Markierung von Belegung).</p>
+
+      <table class="calendar">
+        <thead>
+          <tr>
+            <th>Mo</th>
+            <th>Di</th>
+            <th>Mi</th>
+            <th>Do</th>
+            <th>Fr</th>
+            <th>Sa</th>
+            <th>So</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Beispielhaft 4 Wochenzeilen, du kannst das natürlich anpassen -->
+          <tr>
+            <td onclick="toggleColor(this)">1</td>
+            <td onclick="toggleColor(this)">2</td>
+            <td onclick="toggleColor(this)">3</td>
+            <td onclick="toggleColor(this)">4</td>
+            <td onclick="toggleColor(this)">5</td>
+            <td onclick="toggleColor(this)">6</td>
+            <td onclick="toggleColor(this)">7</td>
+          </tr>
+          <tr>
+            <td onclick="toggleColor(this)">8</td>
+            <td onclick="toggleColor(this)">9</td>
+            <td onclick="toggleColor(this)">10</td>
+            <td onclick="toggleColor(this)">11</td>
+            <td onclick="toggleColor(this)">12</td>
+            <td onclick="toggleColor(this)">13</td>
+            <td onclick="toggleColor(this)">14</td>
+          </tr>
+          <tr>
+            <td onclick="toggleColor(this)">15</td>
+            <td onclick="toggleColor(this)">16</td>
+            <td onclick="toggleColor(this)">17</td>
+            <td onclick="toggleColor(this)">18</td>
+            <td onclick="toggleColor(this)">19</td>
+            <td onclick="toggleColor(this)">20</td>
+            <td onclick="toggleColor(this)">21</td>
+          </tr>
+          <tr>
+            <td onclick="toggleColor(this)">22</td>
+            <td onclick="toggleColor(this)">23</td>
+            <td onclick="toggleColor(this)">24</td>
+            <td onclick="toggleColor(this)">25</td>
+            <td onclick="toggleColor(this)">26</td>
+            <td onclick="toggleColor(this)">27</td>
+            <td onclick="toggleColor(this)">28</td>
+          </tr>
+          <!-- Du kannst weitere Zeilen hinzufügen, falls der Monat 29-31 Tage hat -->
+          <tr>
+            <td onclick="toggleColor(this)">29</td>
+            <td onclick="toggleColor(this)">30</td>
+            <td onclick="toggleColor(this)">31</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    function toggleColor(cell) {
+      // Wenn die Zelle bereits "green" ist, schalte auf "red" um.
+      // Wenn sie "red" ist, nimm die Klasse weg bzw. schalte auf "green".
+      // Ansonsten setze die Klasse auf "green".
+      if (cell.classList.contains('green')) {
+        cell.classList.remove('green');
+        cell.classList.add('red');
+      } else if (cell.classList.contains('red')) {
+        cell.classList.remove('red');
+      } else {
+        cell.classList.add('green');
+      }
+    }
+  </script>
+</body>
+</html>
